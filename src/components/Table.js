@@ -1,7 +1,22 @@
 import React, { useState, useEffect } from "react";
+import { updatePetStatus } from "./SoldPets"
+import axios from "axios";
+import { Buttons } from "./Buttons/Buttons.js"
+
+
 
 
 export function Table({ pets }) {
+
+
+
+const sellPet = async (updateStatus) => {
+    updateStatus.status = "sold";
+    const updatedPet = await updatePetStatus(updateStatus);
+    console.log(updatedPet);
+
+};
+
 
 
   return (
@@ -24,7 +39,7 @@ export function Table({ pets }) {
         
           
             
-            <td><button class="adopt">Adopt</button></td>
+            <td><Buttons sellPet={sellPet} pet={pet} /></td>
           </tr>
         ))
       ) : (
