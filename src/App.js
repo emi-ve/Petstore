@@ -46,9 +46,8 @@ class App extends Component {
         return (
           
           <div className="App">
-            
-              <h1>Kennel</h1>
-              <NavBar />
+            <header class="header"><h1>Kennel</h1></header>
+         
               <div class = "availablePets">
              <h4 class="availableText">Available Pets</h4>
               <Table pets={ this.state.pets}/>

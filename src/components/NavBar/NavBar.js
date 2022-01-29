@@ -28,6 +28,7 @@ export const NavBar = () => {
               </Nav>
           </Navbar.Collapse>
         </Navbar>
+     
     </React.Fragment>
 
   
