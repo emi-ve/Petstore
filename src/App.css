@@ -52,10 +52,13 @@ td {
 
 .center {
 margin-left: 40px;
+
 }
 .availablePets{
 float:left;
 margin-right: 80px;
+width: 800px;
+
 }
 
 .soldPets{

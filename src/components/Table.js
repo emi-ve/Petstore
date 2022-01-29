@@ -18,9 +18,20 @@ const sellPet = async (updateStatus) => {
 };
 
 
+// {
+//   let { isAvailable } = this.state;
+//   let AdoptButton;
 
+//   if (isAvailable) {
+//     AdoptButton = <Buttons sellPet={sellPet} pet={pet} />
+//   } else {
+//     AdoptButton = <p>I'm Adopted!</p>
+//   }
+// }
 
   return (
+
+    
     <table class ="center">
       <thead>
         <tr>
@@ -33,14 +44,15 @@ const sellPet = async (updateStatus) => {
       {pets.length ? (
         pets.map((pet) => (
           <tr>
-            <td>{pet.name}</td>
+            {pet.name.length < 20 ? <td>{pet.name}</td> : <td>invalid</td>}
             <td>{pet.status}</td>
+
+         
             <td>id:{pet.id} category:{pet.category?.name}</td>
-            
-        
+       
           
-            
-            <td><Buttons sellPet={sellPet} pet={pet} /></td>
+            {pet.status === 'available' ? <td><Buttons sellPet={sellPet} pet={pet} /></td> : <td class="shape">I am sold!</td>}
+ 
           </tr>
         ))
       ) : (
@@ -49,5 +61,6 @@ const sellPet = async (updateStatus) => {
         </tr>
       )}   
     </table>
+    
   );
 }
