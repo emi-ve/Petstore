@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { updatePetStatus } from "./SoldPets"
-import axios from "axios";
 import { Buttons } from "./Buttons/Buttons.js"
+
 
 
 
@@ -16,6 +16,7 @@ const sellPet = async (updateStatus) => {
     console.log(updatedPet);
 
 };
+
 
 
 

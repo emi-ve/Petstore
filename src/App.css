@@ -44,13 +44,20 @@ th {
 
 td {
   background-color: lightgray;
-  padding-bottom: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
 }
 
 .center {
-  margin-left: auto;
-  margin-right: auto;
+margin-left: 40px;
+}
+.availablePets{
+float:left;
+margin-right: 80px;
+}
+
+.soldPets{
+  margin-left: 100px;
 }
