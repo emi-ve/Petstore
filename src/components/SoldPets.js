@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//PUT API call to update pet data in Table.js
 
 export const updatePetStatus = async (updatedPet) => {
   const response = await axios({
