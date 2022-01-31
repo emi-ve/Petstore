@@ -32,21 +32,21 @@ class App extends Component {
   }
 
   
-  // passing state to tables and rendering to DOM
+  // passing API pet data as state to tables and rendering to DOM, one sold pets and one available
   render() {
 
     const { pets = [] } = this.state; 
         return (
           
           <div className="App" >
-            <header class="header"><img class="logo" src={ require('./assets/PetAdoption.png')  } /> </header>
-            <div class="petTables">
-              <div class = "availablePets" >
-             <h4 class="availableText">Available Pets</h4>
+            <header className="header"><img class="logo" src={ require('./assets/PetAdoption.png')  } /> </header>
+            <div className="petTables">
+              <div className = "availablePets" >
+             <h4 className="availableText">Available Pets</h4>
               <Table pets={ this.state.pets} />
               </div>
-              <div class="soldPets">
-              <h4 class="unavailableText">Sold Pets</h4>
+              <div className="soldPets">
+              <h4 className="unavailableText">Sold Pets</h4>
               <Table pets={ this.state.pets2 }/>
               </div>
               </div>
