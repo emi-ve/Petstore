@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eeb1de3e.css",
+    "main.js": "/static/js/main.14c5182c.js",
+    "static/media/PetAdoption.png": "/static/media/PetAdoption.81b3f5603a65ea38833a.png",
+    "index.html": "/index.html",
+    "main.eeb1de3e.css.map": "/static/css/main.eeb1de3e.css.map",
+    "main.14c5182c.js.map": "/static/js/main.14c5182c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eeb1de3e.css",
+    "static/js/main.14c5182c.js"
+  ]
+}
