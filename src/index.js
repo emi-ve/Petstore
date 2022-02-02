@@ -4,7 +4,7 @@ import App from'./App.js';
 
 
 
-
+//rendering App component. Calls/reads App.js render function
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { updatePetStatus } from "./SoldPets";
 
-
 //function to mark pets as "sold" by changing API
 export function Table({ pets }) {
   const sellPet = async (updateStatus) => {
     updateStatus.status = "sold";
     const updatedPet = await updatePetStatus(updateStatus);
-    console.log("the updated pet list:",updatedPet);
+    console.log("the updated pet list:", updatedPet);
 
     alert("adoption processed & pending");
-
   };
-
 
   //return API data in built table.
 
@@ -36,7 +33,7 @@ export function Table({ pets }) {
               <td>{pet.status}</td>
 
               {/* if pet category is not null, render. If it is, insert string "null" */}
-              {pet.category != null ? (
+              {pet.category != null && pet.category?.length < 20 ? (
                 <td>
                   id:{pet.id} / category:{pet.category?.name}
                 </td>
@@ -47,7 +44,6 @@ export function Table({ pets }) {
               {/* if the pet is available, display button to adopt. If unavailable, show text */}
               {pet.status === "available" ? (
                 <td>
-            
                   <button className="adoptButton" onClick={() => sellPet(pet)}>
                     Adopt Me?
                   </button>
